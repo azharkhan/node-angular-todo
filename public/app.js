@@ -17,7 +17,7 @@ todoApp.controller('MainCtrl', function($scope, $http) {
    $scope.createTodo = function () {
         $http.post('/api/todos', $scope.formData)
             .success(function(data) {
-                $scope.formData = {}    // clear the form so that user can enter another ToDo
+                $scope.formData = {};    // clear the form so that user can enter another ToDo
                 $scope.todos = data;
                 console.log(data);
             })
